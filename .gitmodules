@@ -1,0 +1,3 @@
+[submodule "lib/iota-streams"]
+	path = lib/iota-streams
+	url = git@github.com:iotaledger/streams.git
