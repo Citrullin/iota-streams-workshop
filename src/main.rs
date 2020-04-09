@@ -16,6 +16,7 @@ fn example() -> Fallible<()> {
 
     println!("announce");
     let announcement = author.announce()?;
+    client.send_message(&announcement);
 
     {
         let preparsed = announcement.parse_header()?;
@@ -29,8 +30,6 @@ fn example() -> Fallible<()> {
             .as_ref()
             .map_or(false, |pk| pk.tbits() == announcement.link().base().tbits()));
     }
-
-    //Transport::send_message(&mut client, &announcement);
 
     println!("share keyload for everyone");
     let keyload = author.share_keyload_for_everyone(announcement.link())?;
