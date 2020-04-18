@@ -1,0 +1,12 @@
+[package]
+name = "iota_stream_example"
+version = "0.1.0"
+authors = ["Philipp Blum <philipp-blum@jakiku.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+iota-lib-rs = { version = "^0.4.1" }
+iota-streams = { git = "https://github.com/iotaledger/streams.git"  }
+failure = "0.1"
